@@ -1,22 +1,35 @@
-public class Ticket {
-    protected int Price;
+import java.util.Objects;
+
+public class Ticket implements Comparable<Ticket> {
+    protected int price;
     protected String departureAirport;
     protected String arrivalAirport;
     protected int travelTime;
 
-    public Ticket(int price, String departureAirport, String arrivalAirport, int travelTime) {
-        Price = price;
+    protected int id;
+
+    public Ticket(int price, String departureAirport, String arrivalAirport, int travelTime, int id) {
+        this.price = price;
         this.departureAirport = departureAirport;
         this.arrivalAirport = arrivalAirport;
         this.travelTime = travelTime;
+        this.id=id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getPrice() {
-        return Price;
+        return price;
     }
 
     public void setPrice(int price) {
-        Price = price;
+        this.price = price;
     }
 
     public String getDepartureAirport() {
@@ -41,5 +54,29 @@ public class Ticket {
 
     public void setTravelTime(int travelTime) {
         this.travelTime = travelTime;
+    }
+
+    @Override
+    public int compareTo(Ticket o) {
+        if (this.price< o.price){
+            return -1;
+        }
+        if (this.price> o.price){
+            return 1;
+        }
+        return 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Ticket)) return false;
+        Ticket ticket = (Ticket) o;
+        return price == ticket.price;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(price);
     }
 }

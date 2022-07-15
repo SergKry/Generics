@@ -13,7 +13,7 @@ public class Ticket implements Comparable<Ticket> {
         this.departureAirport = departureAirport;
         this.arrivalAirport = arrivalAirport;
         this.travelTime = travelTime;
-        this.id=id;
+        this.id = id;
     }
 
     public int getId() {
@@ -58,10 +58,10 @@ public class Ticket implements Comparable<Ticket> {
 
     @Override
     public int compareTo(Ticket o) {
-        if (this.price< o.price){
+        if (this.price < o.price) {
             return -1;
         }
-        if (this.price> o.price){
+        if (this.price > o.price) {
             return 1;
         }
         return 0;

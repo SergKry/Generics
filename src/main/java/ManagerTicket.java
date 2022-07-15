@@ -2,7 +2,7 @@
 
 import java.util.Arrays;
 
-public class ManagerTicket  {
+public class ManagerTicket {
 
     private Repository repo;
 
@@ -26,7 +26,7 @@ public class ManagerTicket  {
                 result = tmp.clone();
             }
         }
-    Arrays.sort(result);
+        Arrays.sort(result);
         return result;
     }
 

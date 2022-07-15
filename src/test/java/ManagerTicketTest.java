@@ -106,29 +106,25 @@ public class ManagerTicketTest {
 
         Ticket[] actual = repo.getAll();
         Ticket[] expected = {
-        ticket1,
-        ticket13
-
-        };
-        Assertions.assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void findAllToTicketNull() {
-        ticket.add(ticket1);
-        ticket.add(ticket2);
-        ticket.add(ticket3);
-        Ticket[] actual = ticket.findAll("", "");
-        Ticket[] expected = {
                 ticket1,
-                ticket2,
-                ticket3
-
+                ticket13
 
         };
-
-
         Assertions.assertArrayEquals(expected, actual);
-
     }
+
+    //@Test
+    //public void findAllToTicketNull() {
+    //    ticket.add(ticket1);
+    //    ticket.add(ticket2);
+    //    ticket.add(ticket3);
+    //    Ticket[] actual = ticket.findAll("", "");
+    //    Ticket[] expected = {
+    //            ticket1,
+    //           ticket2,
+    //           ticket3
+//};
+//       Assertions.assertArrayEquals(expected, actual);
+
+//    }
 }

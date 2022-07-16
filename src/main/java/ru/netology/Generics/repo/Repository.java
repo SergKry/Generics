@@ -1,3 +1,5 @@
+package ru.netology.Generics.repo;
+import ru.netology.Generics.ticket.Ticket;
 public class Repository {
 
     private Ticket[] tickets = new Ticket[0];

@@ -1,6 +1,8 @@
-
+package ru.netology.Generics.manager;
 
 import java.util.Arrays;
+import ru.netology.Generics.repo.Repository;
+import ru.netology.Generics.ticket.Ticket;
 
 public class ManagerTicket {
 

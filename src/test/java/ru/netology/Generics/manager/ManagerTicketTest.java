@@ -1,5 +1,8 @@
+package ru.netology.Generics.manager;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import ru.netology.Generics.ticket.Ticket;
+import ru.netology.Generics.repo.Repository;
 
 import java.util.Arrays;
 
@@ -96,35 +99,4 @@ public class ManagerTicketTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
-
-    @Test
-    public void removeByIdRepository() {
-        repo.add(ticket1);
-        repo.add(ticket13);
-        repo.add(ticket10);
-        repo.removeById(54);
-
-        Ticket[] actual = repo.getAll();
-        Ticket[] expected = {
-                ticket1,
-                ticket13
-
-        };
-        Assertions.assertArrayEquals(expected, actual);
-    }
-
-    //@Test
-    //public void findAllToTicketNull() {
-    //    ticket.add(ticket1);
-    //    ticket.add(ticket2);
-    //    ticket.add(ticket3);
-    //    Ticket[] actual = ticket.findAll("", "");
-    //    Ticket[] expected = {
-    //            ticket1,
-    //           ticket2,
-    //           ticket3
-//};
-//       Assertions.assertArrayEquals(expected, actual);
-
-//    }
 }
